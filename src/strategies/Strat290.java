@@ -10,7 +10,7 @@ import cantstop.Jeu;
  * Expliquez votre stratégie en une 20aine de lignes maximum.
  *
  * RENDU: Ce fichier, correctement nommé et rempli avec le numéro de la
- * stratégie choisie.
+ * stratégie choisie.ptit test
  *
  * @author VOS NOMS (en binome maximum)
  */
