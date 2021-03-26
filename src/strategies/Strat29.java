@@ -10,7 +10,7 @@ import cantstop.Jeu;
  * Expliquez votre stratégie en une 20aine de lignes maximum.
  *
  * RENDU: Ce fichier, correctement nommé et rempli avec le numéro de la
- * stratégie choisie.
+ * stratégie choisie.ptit test
  *
  * @author VOS NOMS (en binome maximum)
  */
@@ -54,12 +54,17 @@ public class Strat29 implements Strategie {
                 }
             }
         }
-        if (j.getNbCoup() < 4) {
-            return false;
+        if (j.getFini()[5] == true && j.getNbCoup() >= 6 || j.getFini()[4] == true && j.getNbCoup() >= 5
+                || j.getFini()[6] == true && j.getNbCoup() >= 5) {
+            return true;
+        }
+
+        if (j.getNbCoup() >= 8) {
+            return true;
         }
 
         else {
-            return true;
+            return false;
         }
 
     }

@@ -3,7 +3,8 @@ package strategies;
 import cantstop.Jeu;
 
 /**
- * Mauvaise stratégie  
+ * Mauvaise stratégie
+ * 
  * @author humeau
  */
 public class Strat0 implements Strategie {
@@ -12,7 +13,7 @@ public class Strat0 implements Strategie {
      * @param j le jeu
      * @return toujours le 1er choix
      */
-    public int choix(Jeu j){
+    public int choix(Jeu j) {
         return 0;
     }
 
@@ -20,14 +21,14 @@ public class Strat0 implements Strategie {
      * @param j le jeu
      * @return toujours vrai (pour s'arrêter)
      */
-    public boolean stop(Jeu j){
+    public boolean stop(Jeu j) {
         return true;
     }
 
     /**
      * @return "Stratégie mauvaise"
      */
-    public String getName(){
+    public String getName() {
         return "Stratégie mauvaise";
     }
 }

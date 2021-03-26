@@ -47,19 +47,36 @@ public class Strat290 implements Strategie {
      * @return toujours vrai (pour s'arrêter)
      */
     public boolean stop(Jeu j) {
+        boolean colonne7 = false;
+        boolean colonne6ou8 = false;
         for (int i = 0; i < 3; i++) {
             if (j.getBonzes()[i][0] > 1) {
                 if (j.getBonzes()[i][1] == j.getMaximum()[j.getBonzes()[i][0] - 2] && j.getBonzesRestants() == 0) {
                     return true;
                 }
+                if (j.getBonzes()[i][0] == 7) {
+                    colonne7 = true;
+                }
+                if (j.getBonzes()[i][0] == 6 || j.getBonzes()[i][0] == 8) {
+                    colonne6ou8 = true;
+                }
+
             }
         }
-        if (j.getNbCoup() < 4) {
-            return false;
+        if (colonne7 == true && j.getNbCoup() >= 10) {
+            return true;
+        }
+
+        else if (colonne6ou8 == true && j.getNbCoup() >= 8) {
+            return true;
+        }
+
+        else if (j.getNbCoup() >= 6) {
+            return true;
         }
 
         else {
-            return true;
+            return false;
         }
 
     }

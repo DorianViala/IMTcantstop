@@ -16,8 +16,7 @@ public class Main {
         // Pour lancer un tournoi avec 10 000 exécutions à chaque fois (entre chaque
         // couple d'IA).
         // Mettez dans ce tableau les strats à tester
-        int[] stratToTest = { 29,2,3,4,5,6,7};
+        int[] stratToTest = { 290, 29 };
         j.runIA(stratToTest, 10000);
-
     }
 }
